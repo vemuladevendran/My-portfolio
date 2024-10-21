@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row py-3">
+    <div class="col-12">
+      <p class="mt-2 fw-bold fs-4" style="color: #397eef">
+        Tools and Technologies
+      </p>
+      <p class="fs-5 text-secondary text-justify">
+        I leverage a blend of advanced technologies and trusted open-source
+        tools to create user-centric, high-performance applications and websites
+        for mobile devices, tablets, and desktops. My skill set covers both Full
+        Stack Development and Data Analytics.
+      </p>
+
+      <!-- technology -->
+       <div class="row p-1 px-3 g-5">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2" *ngFor="let t of techDetails; let i = index">
+          <div 
+            class="d-flex align-items-center tech-wrapper rounded p-2" 
+            [attr.data-aos]="i % 2 === 0 ? 'fade-up-right' : 'fade-down'"
+          >
+            <img class="tech-img" [src]="t.img" [alt]="t.name">
+            <span class="ms-3">{{t.name}}</span>
+          </div>
+        </div>
+        
+       </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="h-100">
+    <!-- nav bar -->
+    <nav class="fixed-top shadow">
+      <section class="container-fluid">
+        <div class="row py-3">
+          <div class="col-12 col-md-6 col-lg-7 d-flex align-items-center">
+            <img src="/assets/my.jpg" alt="MY" class="my-img me-3">
+            <h1 class="fs-4 fw-bold">Devendran Vemula</h1>
+          </div>
+          <div class="col-6 col-lg-5 d-none d-md-block">
+            <div class="row">
+              <div class="col nav-item text-center cursor-pointer" 
+                   [class.active-nav]="currentSection === 'home'"
+                   (click)="scrollToSection('home')">Home</div>
+              <div class="col nav-item text-center cursor-pointer"
+                   [class.active-nav]="currentSection === 'about-me'"
+                   (click)="scrollToSection('about-me')">About Me</div>
+              <div class="col nav-item text-center cursor-pointer d-md-none d-lg-block"
+                   [class.active-nav]="currentSection === 'tech-details'"
+                   (click)="scrollToSection('tech-details')">Tech Details</div>
+              <div class="col nav-item text-center cursor-pointer"
+                   [class.active-nav]="currentSection === 'projects'"
+                   (click)="scrollToSection('projects')">Projects</div>
+              <div class="col nav-item text-center cursor-pointer"
+                   [class.active-nav]="currentSection === 'contact'"
+                   (click)="scrollToSection('contact')">Contact</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </nav>
+  
+    <!-- Scroll Spy sections -->
+    <main class="main-container h-100" scrollSpy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+      <section id="home" class="h-100">
+        <app-banner-section></app-banner-section>
+      </section>
+  
+      <section id="about-me">
+        <app-about-me></app-about-me>
+      </section>
+  
+      <section id="tech-details">
+        <app-tools></app-tools>
+      </section>
+  
+      <section id="projects">
+        <app-projects></app-projects>
+      </section>
+  
+      <section id="contact">
+        <app-contact-us></app-contact-us>
+      </section>
+  
+      <section>
+        <app-footer></app-footer>
+      </section>
+    </main>
+  </div>
+  

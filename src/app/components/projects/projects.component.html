@@ -1,0 +1,36 @@
+<div style="background-color: #f3f4f6">
+  <div class="container">
+    <h1 class="text-center fw-bold py-3">Projects</h1>
+    <p class="mt-2 fw-bold fs-4" style="color: #397eef">Things I've Created</p>
+    <div class="row py-2">
+      <div
+        class="col-12 col-md-6 col-lg-4 p-2"
+        *ngFor="let p of projectDetails"
+      >
+        <div class="card">
+          <img  [src]="p?.img" class="card-img-top project-img" [alt]="p?.name" />
+          <div class="card-body">
+            <p class="fw-bold">{{p?.name}}</p>
+            <p class="card-text text-justify">
+             {{p?.description}}
+            </p>
+            <hr />
+            <div class="d-flex justify-content-end">
+              <a target="_blank" *ngIf="p?.git != ''" [href]="p?.git"
+                ><i class="bi bi-github fs-4 mx-2 app-text-primary"></i
+              ></a>
+              <a target="_blank" *ngIf="p?.link != ''" [href]="p?.link"
+                ><i
+                  class="bi bi-box-arrow-up-right fs-4 mx-2 app-text-primary"
+                ></i
+              ></a>
+              <a target="_blank" href="https://www.linkedin.com/in/devendranvemula/"
+                ><i class="bi bi-linkedin fs-4 mx-2 app-text-primary"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

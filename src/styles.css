@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+a {
+    text-decoration: none;
+}
+
+
+.app-text-primary {
+    color: #397eef;
+}
+
+.app-bg-primary {
+    background-color: #397eef;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}

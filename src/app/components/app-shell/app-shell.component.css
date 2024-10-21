@@ -1,0 +1,30 @@
+.main-container {
+    margin-top: 4rem;
+}
+
+nav {
+    background-color: white;
+}
+
+.nav-item {
+    text-wrap: nowrap;
+    align-content: center;
+    color: black;
+}
+
+.active-nav {
+    background-color: #397eef;
+    padding: .33rem .25rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.active-nav > a {
+    color: white !important;
+}
+
+.my-img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
