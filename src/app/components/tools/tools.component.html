@@ -15,10 +15,11 @@
        <div class="row p-1 px-3 g-5">
         <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2" *ngFor="let t of techDetails; let i = index">
           <div 
-            class="d-flex align-items-center tech-wrapper rounded p-2" 
-            [attr.data-aos]="i % 2 === 0 ? 'fade-up-right' : 'fade-down'"
+            class="d-flex align-items-center tech-wrapper rounded p-2"  
+            [attr.data-sal]="i % 2 === 0 ? 'slide-up' : 'slide-down'"
+            style="--sal-duration: .9s; --sal-delay: .1s;"
           >
-            <img class="tech-img" [src]="t.img" [alt]="t.name">
+            <img class="tech-img" [src]="t.img" [alt]="t.name" decoding="async" loading="lazy">
             <span class="ms-3">{{t.name}}</span>
           </div>
         </div>
@@ -27,3 +28,4 @@
     </div>
   </div>
 </div>
+

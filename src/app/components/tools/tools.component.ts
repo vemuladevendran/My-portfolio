@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import sal from 'sal.js';
 
 @Component({
   selector: 'app-tools',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './tools.component.html',
   styleUrl: './tools.component.css'
 })
-export class ToolsComponent {
+export class ToolsComponent implements AfterViewInit  {
   techDetails =  [
     {
       img: '/assets/tech/javascript.png',
@@ -99,4 +100,11 @@ export class ToolsComponent {
       name: 'Git'
     }
   ]
+
+  ngAfterViewInit(): void {
+    sal({
+      root: null,
+      once: false,
+    });
+  }
 }
