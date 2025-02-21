@@ -59,4 +59,14 @@ export class ProjectsComponent {
         'Developed a comprehensive database for managing student and faculty data, including personal details, grades, assignments, and timetables. The system streamlines operations and enhances data accessibility for college administrators.',
     },
   ];
+
+  currentProjects: any = [
+    {
+      name: 'Expense Prediction App',
+      img: '/assets/projects/expense.webp',
+      description:
+        'Developing a cross-platform expense tracking application using Ionic and Angular for the frontend, with Node.js and MongoDB handling the backend. The app enables users to log daily and weekly expenses, categorize spending, and gain financial insights through visual analytics and predictive suggestions. Integrating a machine learning model trained on synthetic data to predict next month’s expenses based on past spending patterns. Using MongoDB for efficient data storage and retrieval, ensuring accuracy in financial forecasting.Technologies: Ionic, Angular, Node.js, MongoDB, Machine Learning.',
+      git: '',
+    },
+  ];
 }
