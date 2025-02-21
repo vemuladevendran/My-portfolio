@@ -12,20 +12,79 @@
       </p>
 
       <!-- technology -->
-       <div class="row p-1 px-3 g-5">
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2" *ngFor="let t of techDetails; let i = index">
-          <div 
-            class="d-flex align-items-center tech-wrapper rounded p-2"  
-            [attr.data-sal]="i % 2 === 0 ? 'slide-up' : 'slide-down'"
-            style="--sal-duration: .9s; --sal-delay: .1s;"
+     <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="mt-2 mb-0 fs-5" style="color: #397eef">Frontend Development & Tools</p>
+        <div class="row p-1 px-3 g-5">
+          <div
+            class="col-6 col-sm-4 col-md-6 col-lg-4 px-2"
+            *ngFor="let t of techCategories.frontendDevelopment; let i = index"
           >
-            <img class="tech-img" [src]="t.img" [alt]="t.name" decoding="async" loading="lazy">
-            <span class="ms-3">{{t.name}}</span>
+            <div
+              class="d-flex align-items-center tech-wrapper rounded p-2"
+              [attr.data-sal]="i % 2 === 0 ? 'slide-up' : 'slide-down'"
+              style="--sal-duration: 0.9s; --sal-delay: 0.1s"
+            >
+              <img
+                class="tech-img"
+                [src]="t.img"
+                [alt]="t.name"
+                decoding="async"
+                loading="lazy"
+              />
+              <span class="ms-3">{{ t.name }}</span>
+            </div>
           </div>
         </div>
-        
-       </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="mt-2 mb-0 fs-5" style="color: #397eef">Data Analysis & Cloud</p>
+        <div class="row p-1 px-3 g-5">
+          <div
+            class="col-6 col-sm-4 col-md-6 col-lg-4 px-2"
+            *ngFor="let t of techCategories.dataAnalysis; let i = index"
+          >
+            <div
+              class="d-flex align-items-center tech-wrapper rounded p-2"
+              [attr.data-sal]="i % 2 === 0 ? 'slide-up' : 'slide-down'"
+              style="--sal-duration: 0.9s; --sal-delay: 0.1s"
+            >
+              <img
+                class="tech-img"
+                [src]="t.img"
+                [alt]="t.name"
+                decoding="async"
+                loading="lazy"
+              />
+              <span class="ms-3">{{ t.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-2 mb-0 fs-5" style="color: #397eef">Backend Development & Database</p>
+        <div class="row p-1 px-3 g-5">
+          <div
+            class="col-6 col-sm-4 col-md-6 col-lg-4 px-2"
+            *ngFor="let t of techCategories.backendDevelopment; let i = index"
+          >
+            <div
+              class="d-flex align-items-center tech-wrapper rounded p-2"
+              [attr.data-sal]="i % 2 === 0 ? 'slide-up' : 'slide-down'"
+              style="--sal-duration: 0.9s; --sal-delay: 0.1s"
+            >
+              <img
+                class="tech-img"
+                [src]="t.img"
+                [alt]="t.name"
+                decoding="async"
+                loading="lazy"
+              />
+              <span class="ms-3">{{ t.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
     </div>
   </div>
 </div>
-
